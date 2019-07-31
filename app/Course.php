@@ -15,7 +15,7 @@ class Course extends Model
     }
     public function course_outlines()
     {
-        return $this->hasMany('App\CourseOutlines');
+        return $this->hasMany('App\CourseOutline');
     }
     public function applicants()
     {
