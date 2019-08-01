@@ -14,10 +14,12 @@ use Illuminate\Http\Request;
 */
 //Courses
 Route::get('/courses', 'CoursesController@index');
+Route::get('/courses/categories', 'CoursesController@categories');
 Route::get('/courses/{id}', 'CoursesController@course');
 Route::get('/courses/{id}/outline', 'CoursesController@outline');
 //Applicants
 Route::get('/applicants', 'ApplicantsController@index');
+Route::post('/applicants/enroll', 'ApplicantsController@enroll');
 
 // Route::get('/outline', 'CoursesController@outline');
 

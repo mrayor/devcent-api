@@ -23,8 +23,8 @@ class CreateCoursesTable extends Migration
             $table->string('training_instructor');
             $table->string('featured_image');
             $table->integer('category_id');
-            $table->bigInteger('available_seats');
-            $table->decimal('price');
+            $table->string('available_seats');
+            $table->string('price');
             $table->timestamps();
         });
     }

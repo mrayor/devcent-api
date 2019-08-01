@@ -20,6 +20,8 @@ class CreateApplicantsTable extends Migration
             $table->string('email');
             $table->string('payment_mode');
             $table->integer('course_id');
+            $table->string('course_name');
+            $table->string('amount_due');
             $table->string('application_id');
             $table->boolean('payment_completed')->default(0);
             $table->timestamps();

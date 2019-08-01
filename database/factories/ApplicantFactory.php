@@ -13,6 +13,8 @@ $factory->define(Applicant::class, function (Faker $faker) {
         'email' => $faker->email,
         'payment_mode' => $faker->randomElement(array('Card', 'Cash', 'Bank')),
         'course_id' => $faker->numberBetween(1, 5),
+        'course_name' => $faker->sentence(7),
+        'amount_due' => $faker->numberBetween(10000, 50000),
         'application_id' => Str::random(10),
     ];
 });
