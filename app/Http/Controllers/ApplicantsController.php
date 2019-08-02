@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Str;
+use App\Mail\ApplicantMail;
 use Illuminate\Http\Request;
 use App\Applicant;
 use Validator;
+use Illuminate\Support\Facades\Mail;
 
 class ApplicantsController extends Controller
 {
@@ -44,6 +45,8 @@ class ApplicantsController extends Controller
             $applicant->amount_due = $request->amount_due;
             $applicant->application_id = mt_rand(1000, 100000);
             $applicant->save();
+
+            Mail::to([$applicant->email])->send(new ApplicantMail($applicant));
 
             return response()->json(['message' => 'Application Successful', 'applicant' => $applicant]);
         }
