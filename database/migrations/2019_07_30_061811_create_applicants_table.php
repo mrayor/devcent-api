@@ -18,6 +18,7 @@ class CreateApplicantsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
+            $table->string('phone');
             $table->string('payment_mode');
             $table->integer('course_id');
             $table->string('course_name');

@@ -11,6 +11,7 @@ $factory->define(Applicant::class, function (Faker $faker) {
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
         'email' => $faker->email,
+        'phone' => $faker->phoneNumber,
         'payment_mode' => $faker->randomElement(array('Card', 'Cash', 'Bank')),
         'course_id' => $faker->numberBetween(1, 5),
         'course_name' => $faker->sentence(7),
