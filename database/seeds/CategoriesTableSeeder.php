@@ -11,6 +11,25 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Category::class, 10)->create();
+        // factory(App\Category::class, 10)->create();
+
+        App\Category::create([
+            'name' => 'design'
+        ]);
+        App\Category::create([
+            'name' => 'web'
+        ]);
+        App\Category::create([
+            'name' => 'networking'
+        ]);
+        App\Category::create([
+            'name' => 'database'
+        ]);
+        App\Category::create([
+            'name' => 'microsoft'
+        ]);
+        App\Category::create([
+            'name' => 'programming'
+        ]);
     }
 }

@@ -32,6 +32,17 @@ class CoursesController extends Controller
         $categories = Category::all();
         return response()->json($categories);
     }
+
+
+    //testing
+    // public function search(Request $request)
+    // {
+    //     $data = $request->get('data');
+    //     $search = Course::where('category_id', 'like', "%{$data}%")->get();
+    //     return response()->json($search);
+    // }
+
+
     // public function outline()
     // {
     //     $outline = CourseOutline::with('course')->get();

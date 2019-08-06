@@ -8,7 +8,7 @@
 
 <body>
     <h1>Hello {{$applicant->first_name}}</h1>
-    <h2>Welcome to We Like Games!</h2>
+    <h2>Welcome DevCent</h2>
     <h2>Application details</h2>
     <h1>{{$applicant->first_name}}</h1>
     <h1>{{$applicant->last_name}}</h1>

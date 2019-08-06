@@ -17,9 +17,14 @@ Route::get('/courses', 'CoursesController@index');
 Route::get('/courses/categories', 'CoursesController@categories');
 Route::get('/courses/{id}', 'CoursesController@course');
 Route::get('/courses/{id}/outline', 'CoursesController@outline');
+Route::get('/courses/search/{data?}', 'CoursesController@search');
+
+
+
+
 //Applicants
-Route::get('/applicants', 'ApplicantsController@index');
-Route::post('/applicants/enroll', 'ApplicantsController@enroll');
+Route::get('courses/applicants', 'ApplicantsController@index');
+Route::post('courses/applicants/enroll', 'ApplicantsController@enroll');
 
 // Route::get('/outline', 'CoursesController@outline');
 
